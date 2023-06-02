@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Merk extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  protected $table = "merks";
+
+  protected $fillable = [
+    'merk'
+  ];
 }
