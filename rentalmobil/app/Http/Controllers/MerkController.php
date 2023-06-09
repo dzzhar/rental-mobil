@@ -17,13 +17,36 @@ class MerkController extends Controller
     {
         return view('pages.merk.create');
     }
-    
+
     function store(Request $request)
     {
         $merkData = new Merk;
         $merkData->merk = $request->merk;
         $merkData->save();
 
-        return redirect()->to('/merk')->with('succes', 'Data Merk sukses disimpan');
+        return redirect()->to('/merk')->with('Success', 'Data Merk sukses disimpan');
+    }
+
+    function edit($id)
+    {
+        $merkData = Merk::find($id); //SELECT * FROM merks WHERE id = $id
+        return view('pages.merk.edit', ['merkData' => $merkData]);
+    }
+
+    function update($id, Request $request)
+    {
+        $merkData = Merk::find($id);
+        $merkData->merk = $request->merk; //$request sama seperti $_POST
+        $merkData->save();
+
+        return redirect()->to('/merk')->with('Success', 'Data Merk berhasil di-update'); //Mengalihkan halaman setelah berhasil disimpan
+    }
+
+    function delete($id)
+    {
+        $merkData = Merk::find($id);
+        $merkData->delete(); //Data akan dihapus
+
+        return redirect()->to('/merk')->with('Success', 'Data Merk berhasil dihapus');
     }
 }
