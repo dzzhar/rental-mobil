@@ -47,3 +47,10 @@ Route::post('/tipemobil/simpan-data', [TipeMobilController::class, 'store']);
 Route::get('/tipemobil/edit/{id}', [TipeMobilController::class, 'edit']);
 Route::post('/tipemobil/update/{id}', [TipeMobilController::class, 'update']);
 Route::get('/tipemobil/delete/{id}', [TipeMobilController::class, 'delete']);
+
+Route::get('/user', [UsersController::class, 'index']);
+Route::get('/user/create', [UsersController::class, 'create']);
+Route::post('/user/simpan-data', [UsersController::class, 'store']);
+Route::get('/user/edit/{id}', [UsersController::class, 'edit']);
+Route::post('/user/update/{id}', [UsersController::class, 'update']);
+Route::get('/user/delete/{id}', [UsersController::class, 'delete']);
