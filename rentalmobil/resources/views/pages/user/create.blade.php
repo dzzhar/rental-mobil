@@ -17,7 +17,7 @@
                         <label for="">Name</label>
                         <input type="text" class="form-control" name="name" required><br>
                         <label for="">Email</label>
-                        <input type="text" class="form-control" name="email" required><br>
+                        <input type="email" class="form-control" name="email" required><br>
                         <label for="">Contact</label>
                         <input type="text" class="form-control" name="contact" required><br>
                         <label for="">Password</label>

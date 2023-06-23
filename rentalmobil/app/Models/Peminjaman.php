@@ -12,10 +12,10 @@ class Peminjaman extends Model
 
     protected $fillable = [
         'user_id',
-        'merk_id',
+        'mobil_id',
+        'nama_peminjaman',
         'tanggal_peminjaman',
-        'tanggal pengembalian',
-        'lama_peminjaman',
+        'tanggal_pengembalian',
         'status_mobil'
     ];
 }

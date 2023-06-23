@@ -18,7 +18,7 @@
                         <input type="text" class="form-control" value="{{ $userData->name }}" name="name"
                             required><br>
                         <label for="">Email</label>
-                        <input type="text" class="form-control" value="{{ $userData->email }}" name="email"
+                        <input type="email" class="form-control" value="{{ $userData->email }}" name="email"
                             required><br>
                         <label for="">Contact</label>
                         <input type="text" class="form-control" value="{{ $userData->contact }}" name="contact"
